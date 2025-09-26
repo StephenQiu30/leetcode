@@ -12,16 +12,17 @@ public:
     {
         int n = nums.size();
         if (n <= 1)
-        {
             return;
-        }
         vector<int> a = nums;
-        sort(nums.begin(), nums.end());
+        sort(a.begin(), a.end());
         vector<int> res(n);
+        // 左半段长度
         int mid = (n + 1) / 2;
+        // 左半段的末尾索引
         int left = mid - 1;
+        // 右半段的末尾索引
         int right = n - 1;
-        for (int i = 0; i < n; i++)
+        for (int i = 0; i < n; ++i)
         {
             if ((i & 1) == 0)
             {
